@@ -1,0 +1,7 @@
+
+                Query: SELECT COUNT(t1.id) as count FROM calls t1, accounts t2
+WHERE t1.accountid_from IS NULL AND t1.accountid_to = t2.id 
+    AND t2.planid = 1002
+    AND date BETWEEN '2020-04-15 00:00:00' AND '2020-05-16 00:00:00'
+                Result: 2
+                

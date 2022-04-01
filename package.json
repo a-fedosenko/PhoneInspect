@@ -1,0 +1,16 @@
+{
+  "name": "phsql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "bin": {
+    "phsql": "./app.js"
+  },
+  "dependencies": {
+    "commander": "^9.1.0",
+    "inquirer": "^8.2.2",
+    "libphonenumber-js": "^1.9.50",
+    "mysql2": "^2.3.3",
+    "node-localstorage": "^2.2.1"
+  }
+}

@@ -1,0 +1,6 @@
+SELECT t0.id as id, t3.data as data FROM accounts t0
+INNER JOIN (
+    SELECT t1.accountid_to as id, t2.data as data FROM calls t1, calldata t2 
+    WHERE t1.id = t2.id
+) t3 ON t3.id = t0.id
+WHERE t0.planid = ?

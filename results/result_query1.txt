@@ -1,0 +1,6 @@
+
+                Query: SELECT COUNT(DISTINCT accountid_from) AS count FROM calls 
+WHERE accountid_to IS NULL 
+    AND date BETWEEN '2020-01-01 00:00:00' AND '2020-02-01 00:00:00'
+                Result: 3
+                

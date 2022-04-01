@@ -1,0 +1,6 @@
+
+                Query: SELECT COUNT(id) as count FROM calls 
+WHERE accountid_from IS NOT NULL AND accountid_to IS NOT NULL
+AND date BETWEEN '2020-01-15 00:00:00' AND '2020-02-21 00:00:00'
+                Result: 5
+                

@@ -1,0 +1,12 @@
+
+                Query: SELECT COUNT(t0.accountid ) as count FROM `account_phones` t0 
+INNER JOIN (
+    SELECT t1.accountid_to as accountid FROM calls t1, accounts t2
+    WHERE t1.accountid_from IS NOT NULL AND t1.accountid_to IS NOT NULL
+        AND t1.accountid_from = t2.id
+        AND t2.planid = 1002
+        AND t1.duration > 60
+) t3 ON t0.accountid = t3.accountid
+WHERE t0.phonenumber LIKE '1209%' OR t0.phonenumber LIKE '1415%'
+                Result: 6
+                

@@ -1,0 +1,12 @@
+
+                Query: SELECT COUNT(t0.id) as count  FROM `phones` t0 
+INNER JOIN (
+    SELECT t4.phoneid as phoneid FROM calls t1, accounts t2, plans t3, account_phones t4
+        WHERE t1.accountid_from is NOT NULL AND t1.accountid_from = t4.accountid
+            AND t1.accountid_from = t2.id
+            AND t2.planid = t3.id
+            AND t3.price > 200
+) t5 ON t0.id = t5.phoneid
+WHERE t0.name LIKE 'Cisco%'
+                Result: 4
+                
